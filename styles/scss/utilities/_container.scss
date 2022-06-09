@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as *;
+
+.container {
+  --side-space: $container-side-space;
+  --max-width: $container-max-width;
+  padding-inline: var(--side-space);
+  margin-inline: auto;
+  max-width: var(--max-width);
+}
+
+.grid-container {
+  --side-space: $container-side-space;
+  --max-width: $container-max-width;
+  display: grid;
+  grid-template-columns:
+    1fr min(var(--max-width), calc(100% - (var(--side-space) * 2)))
+    1fr;
+  grid-column-gap: var(--side-space);
+}
+
+.grid-container > * {
+  grid-column: 2;
+}

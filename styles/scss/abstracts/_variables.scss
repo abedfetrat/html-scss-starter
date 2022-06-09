@@ -1,0 +1,9 @@
+/* Breakpoints */
+$breakpoints: (
+  "medium": 48em, // 768px
+  "large": 69.375em // 1110px
+);
+
+/* Container */
+$container-side-space: rem(16px);
+$container-max-width: rem(1110px);
